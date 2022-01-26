@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style type="text/css">
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popping', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    background: #252839;
+}
+#d1{
+    width: 50%;
+    height: 400px;
+    padding: 50px;
+}
+.border {
+    position: relative;
+    border: 0 solid green;
+}
+.border:after, 
+.border:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content:'';
+}
+.border:after {
+  border: 0 solid #fff;
+}
+
+.border:before {
+  border: 0 solid orange;
+}
+
+.border.top, 
+.border.top:after,
+.border.top:before {
+  border-top-width: 10px;
+}
+.border.bottom, 
+.border.bottom:after,
+.border.bottom:before {
+  border-bottom-width: 10px;
+}
+.border.side, 
+.border.side:after,
+.border.side:before {
+  border-right-width: 10px;
+  border-left-width: 10px;
+}
+
+.border.top:before {
+  top: 9px;
+}
+.border.bottom:before {
+  bottom: 9px;
+}
+.border.side:before {
+  left: 9px;
+  right: 9px;
+}
+h2{
+    margin-left: 10px;
+    position: relative;
+    font-size: 80px;
+    color:  #252839;
+    -webkit-text-stroke:0.3vw #383d52;
+    text-transform: uppercase;
+}
+h2::before{
+
+content: attr(data-text);
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 80%;
+color: orange;
+-webkit-text-stroke:0.3vw orange;
+border-right: 2px solid #252839;
+overflow: hidden;
+animation: animate 6s linear infinite;
+}
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+
+
+h3{
+    margin-left: 10px;
+    position: relative;
+    font-size: 70px;
+    color:  #252839;
+    -webkit-text-stroke:0.3vw #383d52;
+    text-transform: uppercase;
+}
+h3::before{
+
+content: attr(data-text);
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 80%;
+color: #fff;
+-webkit-text-stroke:0.3vw #fff;
+border-right: 2px solid #252839;
+overflow: hidden;
+animation: animate 6s linear infinite;
+}
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    50%,90%
+    {
+        width: 100%;
+    }
+}
+
+h1{
+    margin-left: 10px;
+    position: relative;
+    font-size: 80px;
+    color:  #252839;
+    -webkit-text-stroke:0.3vw #383d52;
+    text-transform: uppercase;
+}
+h1::before{
+
+content: attr(data-text);
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 80%;
+color: green;
+-webkit-text-stroke:0.3vw green;
+border-right: 2px solid #252839;
+overflow: hidden;
+animation: animate 6s linear infinite;
+}
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+h4{
+    color: white;
+    padding-left: 12px;
+    text-shadow: 2px 2px 8px #FF0000;
+
+}
+#name{
+    color: white;
+    padding-left: 12px;
+    padding-top: 5px;
+    text-shadow: 2px 2px 4px #000000;
+
+}
+.footer{
+    position: relative;
+    top: -15px;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+.footer span a{
+    color: #51e505;
+    text-decoration: none;
+}
+.footer span a:hover{
+    text-decoration: underline;
+}
+
+
+    </style>
+</head>
+<body>
+
+<div id="d1" class="border bottom side top">
+    <h4>*** WISH YOU ***</h4>
+    <h2 data-text="happy">happy</h2>
+    <h3 data-text="republic">republic</h3>
+    <h1 data-text="day">day</h1>
+    <h4 id="name">From Karan Sharma</h4>
+    <div class="gif" style="position:relative;top: 15%;">
+        <img src="giphy.gif" alt="Republic day gif" style="width:100%;">
+    </div>
+    <div class="footer">
+        <span>Created by <a href="http://www.karanportfolio.ml/" target="_blank">Karan Sharma</a>
+    </div>
+    
+</div>
+
+
+ 
+
+</body>
+</html>
